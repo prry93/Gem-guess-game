@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Unit 4 game</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/game .js"></script>
+
+</head>
+
+<body>
+
+<header class = "container">
+  <div class="row">
+    <div class="col-md-4">
+      <h1>Crystal Collector !</h1>
+    </div>
+  </div>
+</header>
+
+<div class = "paragraph">
+    <div class="row">
+      <div class="col-md-9">
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+        <p>The value of each crystal is hidden from you unitl you click on it.</p>
+        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+      </div>
+    </div>
+</div>
+
+<div class = "paragraph">
+    <div class="row">
+      <div class="col-md-4">
+        <h1>score: <span id="target-score"></span></h1>
+      </div>
+      <div class="col-md-2">
+        <p>Wins: <span id="wins"></span></p>
+        <p>losses: <span id="losses"></span> </p>
+      </div>
+    </div>
+</div>
+
+<div id="gem" class = "paragraph">
+  <div class="row">
+    <div class="col-md-2">
+      <img src="./assets/images/Gem 1.png" class="rounded" alt="gem 1">
+    </div>
+    <div id="gem" class="col-md-2">
+      <img src="./assets/images/gem 2.png" class="rounded" alt="gem 2">
+    </div>
+    <div id="gem" class="col-md-2">
+      <img src="./assets/images/gem 3.png" class="rounded" alt="gem 3">
+    </div>
+    <div id="gem" class="col-md-2">
+      <img src="./assets/images/gem 4.png" class="rounded" alt="gem 4">
+    </div>
+  </div>
+</div>
+
+<div class = "paragraph">
+  <div class="row">
+    <div class="col-md-2">
+      <p>Your total score is:</p>
+    </div>
+  </div>
+</div>
+
+<div class = "paragraph">
+  <div class="row">
+    <div class="col-md-2">
+      <p></p>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+// setting up win loss counter
+var wins = 0;
+var losses = 0;
+var totalScore = 0;
+
+var target = Math.floor(Math.random()*119)+18;
+
+$("#target-score").text(target);
+
+$("wins").text(wins);
+$("losses").text(losses);
+
+$("gem").on("click", function(){
+    totalScore += Math.floor(Math.random()*11)+1;
+
+    if (totalScore === target) {
+        wins++ ;
+    }
+    else if (totalScore >= target) {
+        losses ++;
+    }
+}
+
+);
+
+</script>
+
+</body>
+
+</html>
