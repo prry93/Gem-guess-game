@@ -8,8 +8,9 @@
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/javascript/game .js"></script>
+  <!-- Note: external js sheet does not function. Use script below html -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/game .js"></script> -->
 
 </head>
 
@@ -41,24 +42,24 @@
         <h1>score: <span id="target-score"></span></h1>
       </div>
       <div class="col-md-2">
-        <p>Wins: <span id="wins"></span></p>
-        <p>losses: <span id="losses"></span> </p>
+        <p>Wins: <span id="numWins"></span></p>
+        <p>losses: <span id="numLosses"></span> </p>
       </div>
     </div>
 </div>
 
-<div id="gem" class = "paragraph">
+<div id="1" class = "paragraph">
   <div class="row">
     <div class="col-md-2">
       <img src="./assets/images/Gem 1.png" class="rounded" alt="gem 1">
     </div>
-    <div id="gem" class="col-md-2">
+    <div id="2" class="col-md-2">
       <img src="./assets/images/gem 2.png" class="rounded" alt="gem 2">
     </div>
-    <div id="gem" class="col-md-2">
+    <div id="3" class="col-md-2">
       <img src="./assets/images/gem 3.png" class="rounded" alt="gem 3">
     </div>
-    <div id="gem" class="col-md-2">
+    <div id="4" class="col-md-2">
       <img src="./assets/images/gem 4.png" class="rounded" alt="gem 4">
     </div>
   </div>
@@ -74,8 +75,8 @@
 
 <div class = "paragraph">
   <div class="row">
-    <div class="col-md-2">
-      <p></p>
+    <div class="col-md-4">
+      <p> <span id="total-score"></span></p>
     </div>
   </div>
 </div>
@@ -84,30 +85,97 @@
 
 <script type="text/javascript">
 
-// setting up win loss counter
+// setting up win loss and user total score counter at 0
 var wins = 0;
 var losses = 0;
 var totalScore = 0;
 
-var target = Math.floor(Math.random()*119)+18;
+// generates the random value for the clickable crystal
+var gem1= Math.floor(Math.random()*11)+1;
+var gem2= Math.floor(Math.random()*11)+1;
+var gem3= Math.floor(Math.random()*11)+1;
+var gem4= Math.floor(Math.random()*11)+1;
 
-$("#target-score").text(target);
+// Counts wins and losses
+$("#numWins").text(wins);
+$("#numLosses").text(losses);
 
-$("wins").text(wins);
-$("losses").text(losses);
+// will generate the random number that you are trying achieve
+var target = Math.floor(Math.random()*102)+18;
 
-$("gem").on("click", function(){
-    totalScore += Math.floor(Math.random()*11)+1;
-
-    if (totalScore === target) {
-        wins++ ;
-    }
-    else if (totalScore >= target) {
-        losses ++;
-    }
+// will reset game by setting the total user score to 0 and give new number values
+function reset(){
+  totalScore = 0;
+  target = Math.floor(Math.random()*102)+18;
+  var gem1= Math.floor(Math.random()*11)+1;
+  var gem2= Math.floor(Math.random()*11)+1;
+  var gem3= Math.floor(Math.random()*11)+1;
+  var gem4= Math.floor(Math.random()*11)+1;
+  $("#numWins").text(wins);
+  $("#numLosses").text(losses);
+  $("#target-score").text(target);
 }
 
-);
+// will display the score generated from target
+$("#target-score").text(target);
+
+// give click functionality and add to the total score
+
+// Note: wins and losses counter do not work
+
+$("#1").on("click", function(){
+    totalScore = totalScore + gem1;
+  $("#total-score").text(totalScore);
+    if (totalScore === target) {
+        wins++ ;
+        reset();
+    }
+    else if (totalScore > target) {
+        losses ++;
+        reset();
+    }
+})
+
+$("#2").on("click", function(){
+    totalScore = totalScore + gem2;
+  $("#total-score").text(totalScore);
+    if (totalScore === target) {
+        wins++ ;
+        reset();
+    }
+    else if (totalScore > target) {
+        losses ++;
+        reset();
+    }
+})
+
+$("#3").on("click", function(){
+    totalScore = totalScore + gem3;
+  $("#total-score").text(totalScore);
+    if (totalScore === target) {
+        wins++ ;
+        reset();
+    }
+    else if (totalScore > target) {
+        losses ++;   
+    }
+
+})
+
+$("#4").on("click", function(){
+    totalScore = totalScore + gem4;
+  $("#total-score").text(totalScore);
+    if (totalScore === target) {
+        wins++ ;
+        reset();
+    }
+    else if (totalScore > target) {
+        losses ++;
+        reset();
+    }
+})
+
+
 
 </script>
 
