@@ -1,89 +1,38 @@
-<!doctype html>
-<html lang="en-us">
-
-<head>
-
-  <meta charset="UTF-8">
-  <title>Unit 4 game</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-  <!-- Note: external js sheet does not function. Use script below html -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/javascript/game .js"></script> -->
-
-</head>
-
-<body>
-
-<header class = "container">
-  <div class="row">
-    <div class="col-md-4">
-      <h1>Crystal Collector !</h1>
-    </div>
-  </div>
-</header>
-
-<div class = "paragraph">
-    <div class="row">
-      <div class="col-md-9">
-        <p>You will be given a random number at the start of the game.</p>
-        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-        <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
-        <p>The value of each crystal is hidden from you unitl you click on it.</p>
-        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Gem Clicker Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Cabin">
+  </head>
+  
+  <body>
+    <div class="grid-container">
+      <div class="title">Crystal Clicker!!!!</div>
+      <div class="target-score">The Target Score is:    <span id="target-score"></span></div>
+      <div class="wins" >Wins: <span id="numWins"></span></div>
+      <div class="losses">Losses: <span id="numLosses"></span></div>
+      <div class="gem1" id="gem1"><img src="./assets/images/Gem 1.png" alt="red gem"></div>
+      <div class="gem2" id="gem2"><img src="./assets/images/gemdblue.png" alt="dark blue gem"></div>
+      <div class="gem3" id="gem3"><img src="./assets/images/gemgreen.png" alt="green gem"></div>
+      <div class="gem4" id="gem4"><img src="./assets/images/gemlblue.png" alt="light blue gem"></div>
+      <div class="gem5" id="gem5"> <img src="./assets/images/gemdred.png" alt="dark red gem"></div>
+      <div class="gem6" id="gem6"><img src="./assets/images/gemorange.png" alt="orange gem"></div>
+      <div class="gem7" id="gem7"><img src="./assets/images/gemyellow.png" alt="yellow gem"></div>
+      <div class="gem8" id="gem8"><img src="./assets/images/gemred.png" alt="ruby gem"></div>
+      <div class="gem9" id="gem9"><img src="./assets/images/gempurple.png" alt="purple gem"></div>
+      <div class="user-score">Your Score is: <span id="user-score"></span></div>
+      <div class="rules">
+        <p class="rule-lines">You will be given a random number at the start of the game.</p>
+        <p class="rule-lines">There are nine crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <p class="rule-lines">You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+        <p class="rule-lines">The value of each crystal is hidden from you unitl you click on it.</p>
+        <p class="rule-lines">Each time when the game starts, the game will change the values of each crystal.</p>
       </div>
     </div>
-</div>
-
-<div class = "paragraph">
-    <div class="row">
-      <div class="col-md-4">
-        <h1>score: <span id="target-score"></span></h1>
-      </div>
-      <div class="col-md-2">
-        <p>Wins: <span id="numWins"></span></p>
-        <p>losses: <span id="numLosses"></span> </p>
-      </div>
-    </div>
-</div>
-
-<div  class = "paragraph">
-  <div class="row">
-    <div id="gem1" class="col-md-2">
-      <img src="./assets/images/Gem 1.png" class="rounded" alt="gem 1">
-    </div>
-    <div id="gem2" class="col-md-2">
-      <img src="./assets/images/gem 2.png" class="rounded" alt="gem 2">
-    </div>
-    <div id="gem3" class="col-md-2">
-      <img src="./assets/images/gem 3.png" class="rounded" alt="gem 3">
-    </div>
-    <div id="gem4" class="col-md-2">
-      <img src="./assets/images/gem 4.png" class="rounded" alt="gem 4">
-    </div>
-  </div>
-</div>
-
-<div class = "paragraph">
-  <div class="row">
-    <div class="col-md-6">
-      <p>Your total score is: </p>
-    </div>
-    <div class="col-md-6">
-      <p> <span id="user-score"></span></p>
-    </div>
-  </div>
-</div>
-
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script type="text/javascript" src="assets/javascript/game.js"></script>
-
-
-
-</body>
-
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+  </body>
 </html>
