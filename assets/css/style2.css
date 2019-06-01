@@ -1,0 +1,140 @@
+
+body {
+  /* background: url("../images/background1.jpg"); */
+  font-size: 1em;
+  text-align: center;
+  /* color: #b7e3ff; */
+  background-color: rgba(106, 246, 251, 0.7);
+  color: lightgrey;
+  font-family: Cabin, sans-serif;
+}
+.grid-container{
+  display: grid;
+  height: 100vh;
+   width: 100vw;
+  grid-template-columns: auto repeat(3, 1fr) 1fr 1fr auto;
+  grid-template-rows: 1fr 1fr auto repeat(3, 1fr) auto 1fr;
+  gap: 1em 1em;
+  grid-template-areas: 
+    ". . title title title .  ."
+    ". wins target-score target-score target-score  losses ."
+    ". . . . . . ."
+    ".  gem1 gem2 gem3 rules rules . "
+    ". gem4 gem5 gem6 rules rules . "
+    ". gem7 gem8 gem9 rules rules . "
+    ". . . . . . ."
+    ". . user-score user-score user-score . ."
+    ". . . . . .  ."
+}
+
+.title {
+   grid-area: title;
+   /* background-color: #ffc4b0; */
+   font-size: 2.2em;
+   padding-top: 0.75em;
+   background: url("../images/background1.jpg");
+   font-weight: bold;
+   color: black;
+   /* border-collapse and radius is applied to create rounded edges in css grid */
+   border-collapse: separate !important;
+   border-radius: 15px;
+   }
+
+.target-score { 
+grid-area: target-score;
+background-color: dodgerblue;
+font-weight: bold;
+font-size: 2em;
+padding-top: 1em;
+border-collapse: separate !important;
+border-radius: 15px;
+}
+
+.wins {
+   grid-area: wins;
+   background-color: dodgerblue;
+   font-size: 2em;
+   padding-top: 1em;
+   border-collapse: separate !important;
+   border-radius: 15px;
+  }
+
+.losses {
+   grid-area: losses;
+   background-color: dodgerblue;
+   font-size: 2em;
+   padding-top: 1em;
+   border-collapse: separate !important;
+   border-radius: 15px;
+   }
+
+.rules {
+grid-area: rules;
+background-color: skyblue;
+font-size: 1.25em;
+color: black;
+padding: 1.5em 1em 0 1em;
+border-collapse: separate !important;
+border-radius: 15px;
+}
+
+.rule-lines {
+  margin-bottom: 1em;
+}
+
+.gem1 {
+  grid-area: gem1;
+  margin: 0 auto;
+   
+}
+
+.gem2 { 
+  grid-area: gem2;
+  margin: 0 auto;
+  
+ }
+
+.gem3 { 
+  grid-area: gem3;
+  margin: 0 auto;
+ }
+
+.gem4 { 
+  grid-area: gem4;
+  margin: 0 auto;
+ }
+
+.gem5 { 
+  grid-area: gem5;
+  margin: 0 auto;
+ }
+
+.gem6 { 
+  grid-area: gem6;
+  margin: 0 auto;
+ }
+
+.gem7 { 
+  grid-area: gem7;
+  margin: 0 auto;
+ }
+
+.gem8 { 
+  grid-area: gem8;
+  margin: 0 auto;
+ }
+
+.gem9 { 
+  grid-area: gem9;
+  margin: 0 auto;
+ }
+
+.user-score { 
+  grid-area: user-score;
+  background-color: dodgerblue;
+  font-size: 2em;
+  padding-top: 1em;
+  font-weight: bold;  
+  border-collapse: separate !important;
+  border-radius: 15px;
+ }
