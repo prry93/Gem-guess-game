@@ -95,6 +95,7 @@ gem9.addEventListener("click", function(){
     gameLogic(gem9Value);
 });
 
+// Note: can possibly DRY code by using forEach(?).
 
 // ********************************* End of Game ****************************************
 
@@ -103,10 +104,14 @@ function reset(){
     userScore = 0;
     targetScore = Math.floor(Math.random()*102)+18;
      gem1Value= gemValue();
-     console.log(gem1Value);
      gem2Value= gemValue();
      gem3Value= gemValue();
      gem4Value= gemValue();
+     gem5Value= gemValue();
+     gem6Value= gemValue();
+     gem7Value= gemValue();
+     gem8Value= gemValue();
+     gem9Value= gemValue();
      document.querySelector("#numWins").innerHTML = wins
      document.querySelector("#numLosses").innerHTML = losses;
      document.querySelector("#target-score").innerHTML = targetScore;
