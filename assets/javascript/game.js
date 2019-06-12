@@ -95,7 +95,7 @@ gem9.addEventListener("click", function(){
     gameLogic(gem9Value);
 });
 
-// Note: can possibly DRY code by using forEach(?).
+// Note: can possibly DRY code by using forEach(?) to not repeat addevent listener each time.
 
 // ********************************* End of Game ****************************************
 
