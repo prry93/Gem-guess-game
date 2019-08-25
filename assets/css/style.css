@@ -2,10 +2,13 @@
 body {
   font-size: 1em;
   text-align: center;
-  background-color: rgba(106, 246, 251, 0.7);
+  background: radial-gradient(circle, rgb(236, 141, 194) 0%, rgba(148,187,233,1) 100%);
   color: lightgrey;
   font-family: Cabin, sans-serif;
 }
+
+/* Changed color palette to be a pale pastel look to help the solid color gems stand out more */
+
 .grid-container{
   display: grid;
   height: 100vh;
@@ -29,52 +32,53 @@ body {
 .title {
    grid-area: title;
    /* background-color: #ffc4b0; */
-   font-size: 2.2em;
+   font-size: 2.4em;
    padding-top: 0.75em;
    background: url("../images/background1.jpg");
+   opacity: 0.7;
    font-weight: bold;
-   color: black;
+   color:#7b38e8;
    /* border-collapse and radius is applied to create rounded edges in css grid */
    border-collapse: separate !important;
-   border-radius: 15px;
+   border-radius: 12px;
    }
 
 .target-score { 
 grid-area: target-score;
-background-color: dodgerblue;
+background: linear-gradient(30deg, rgba(22,167,217,1) 0%, rgba(165,109,255,1) 75%);
 font-weight: bold;
-font-size: 2em;
+font-size: 2.2em;
 padding-top: 1em;
 border-collapse: separate !important;
-border-radius: 15px;
+border-radius: 12px;
 }
 
 .wins {
    grid-area: wins;
-   background-color: dodgerblue;
-   font-size: 2em;
+   background: linear-gradient(30deg, rgba(22,167,217,1) 0%, rgba(165,109,255,1) 75%);
+   font-size: 2.2em;
    padding-top: 1em;
    border-collapse: separate !important;
-   border-radius: 15px;
+   border-radius: 12px;
   }
 
 .losses {
    grid-area: losses;
-   background-color: dodgerblue;
-   font-size: 2em;
+   background: linear-gradient(30deg, rgba(22,167,217,1) 0%, rgba(165,109,255,1) 75%);
+   font-size: 2.2em;
    padding-top: 1em;
    border-collapse: separate !important;
-   border-radius: 15px;
+   border-radius: 12px;
    }
 
 .rules {
 grid-area: rules;
-background-color: skyblue;
+background-color: rgba(105, 151, 238, 0.973);
 font-size: 1.25em;
-color: black;
+color: lightcyan;
 padding: 1.5em 1em 0 1em;
 border-collapse: separate !important;
-border-radius: 15px;
+border-radius: 12px;
 }
 
 .rule-lines {
@@ -82,12 +86,12 @@ border-radius: 15px;
   /* rule-lines class helps put space between each paragraph line for readability */
 }
 
-.gem1 {
+.gem1  {
   grid-area: gem1;
   margin: 0 auto;
    
 }
-
+/* Need to have classes for all gems in the css page because they are tied to the grid area (can't consolidate into one class)*/
 .gem2 { 
   grid-area: gem2;
   margin: 0 auto;
@@ -131,10 +135,10 @@ border-radius: 15px;
 
 .user-score { 
   grid-area: user-score;
-  background-color: dodgerblue;
-  font-size: 2em;
+  background: linear-gradient(30deg, rgba(22,167,217,1) 0%, rgba(165,109,255,1) 75%);
+  font-size: 2.2em;
   padding-top: 1em;
   font-weight: bold;  
   border-collapse: separate !important;
-  border-radius: 15px;
+  border-radius: 12px;
  }

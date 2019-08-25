@@ -67,6 +67,7 @@ function gameLogic(gem) {
 };
 
 // Each gem variable is assigned to an html element is given an on-click event listener which will run the function listed above
+
 gem1.addEventListener("click", function(){
     gameLogic(gem1Value);
 });
@@ -96,6 +97,7 @@ gem9.addEventListener("click", function(){
 });
 
 // Note: can possibly DRY code by using forEach(?) to not repeat addevent listener each time.
+// gems.forEach(gem => gem.addEventListener('click', gameLogic()))
 
 // ********************************* End of Game ****************************************
 
