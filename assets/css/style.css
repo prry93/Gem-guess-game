@@ -37,7 +37,7 @@ background: radial-gradient(circle, rgba(255,164,99,1) 33%, rgba(241,212,41,1) 9
    font-size: 3em;
    padding-top: 0.75em;
    background: url("../images/background1.jpg");
-   opacity: 0.8;
+   opacity: 0.92;
    font-weight: bold;
    color:#7b38e8;
    /* border-collapse and radius is applied to create rounded edges in css grid */
