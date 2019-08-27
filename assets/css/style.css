@@ -2,7 +2,9 @@
 body {
   font-size: 1em;
   text-align: center;
-  background: radial-gradient(circle, rgb(236, 141, 194) 0%, rgba(148,187,233,1) 100%);
+  /* background: radial-gradient(circle, rgba(22,217,185,1) 0%, rgba(109,159,255,1) 71%); */
+
+background: radial-gradient(circle, rgba(255,164,99,1) 33%, rgba(241,212,41,1) 91%);
   color: lightgrey;
   font-family: Cabin, sans-serif;
 }
@@ -21,9 +23,9 @@ body {
     ". . title title title .  ."
     ". wins target-score target-score target-score  losses ."
     ". . . . . . ."
-    ".  gem1 gem2 gem3 rules rules . "
-    ". gem4 gem5 gem6 rules rules . "
-    ". gem7 gem8 gem9 rules rules . "
+    ". . gem1 gem2 gem3  rules . "
+    ". . gem4 gem5 gem6  rules . "
+    ". . gem7 gem8 gem9  rules . "
     ". . . . . . ."
     ". . user-score user-score user-score . ."
     ". . . . . .  ."
@@ -32,26 +34,29 @@ body {
 .title {
    grid-area: title;
    /* background-color: #ffc4b0; */
-   font-size: 2.4em;
+   font-size: 3em;
    padding-top: 0.75em;
    background: url("../images/background1.jpg");
-   opacity: 0.7;
+   opacity: 0.8;
    font-weight: bold;
    color:#7b38e8;
    /* border-collapse and radius is applied to create rounded edges in css grid */
    border-collapse: separate !important;
-   border-radius: 12px;
+   border-radius: 16px;
    }
 
-.target-score { 
-grid-area: target-score;
-background: linear-gradient(30deg, rgba(22,167,217,1) 0%, rgba(165,109,255,1) 75%);
-font-weight: bold;
-font-size: 2.2em;
-padding-top: 1em;
-border-collapse: separate !important;
-border-radius: 12px;
-}
+  .target-score { 
+  grid-area: target-score;
+  background: linear-gradient(30deg, rgba(22,167,217,1) 0%, rgba(165,109,255,1) 75%);
+  font-weight: bold;
+  font-size: 2.2em;
+  padding-top: 1em;
+  border-collapse: separate !important;
+  border-radius: 12px;
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 5px 10px lightcoral;
+  }
 
 .wins {
    grid-area: wins;
@@ -60,6 +65,9 @@ border-radius: 12px;
    padding-top: 1em;
    border-collapse: separate !important;
    border-radius: 12px;
+   width: 60%;
+   margin: 0 auto;
+   box-shadow: 5px 10px lightcoral;
   }
 
 .losses {
@@ -69,6 +77,9 @@ border-radius: 12px;
    padding-top: 1em;
    border-collapse: separate !important;
    border-radius: 12px;
+   width: 60%;
+   margin: 0 auto;
+   box-shadow: 5px 10px lightcoral;
    }
 
 .rules {
@@ -79,6 +90,7 @@ color: lightcyan;
 padding: 1.5em 1em 0 1em;
 border-collapse: separate !important;
 border-radius: 12px;
+
 }
 
 .rule-lines {
@@ -141,4 +153,7 @@ border-radius: 12px;
   font-weight: bold;  
   border-collapse: separate !important;
   border-radius: 12px;
+  box-shadow: 5px 10px lightcoral;
+  width: 80%;
+  margin: 0 auto;
  }
