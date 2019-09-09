@@ -3,8 +3,7 @@ body {
   font-size: 1em;
   text-align: center;
   /* background: radial-gradient(circle, rgba(22,217,185,1) 0%, rgba(109,159,255,1) 71%); */
-
-background: radial-gradient(circle, rgba(255,164,99,1) 33%, rgba(241,212,41,1) 91%);
+background: radial-gradient(circle, rgba(78,177,255,1) 0%, rgba(234,201,245,1) 100%);
   color: lightgrey;
   font-family: Cabin, sans-serif;
 }
@@ -41,8 +40,9 @@ background: radial-gradient(circle, rgba(255,164,99,1) 33%, rgba(241,212,41,1) 9
    font-weight: bold;
    color:#7b38e8;
    /* border-collapse and radius is applied to create rounded edges in css grid */
+   border: 1px solid #7b38e8;
    border-collapse: separate !important;
-   border-radius: 16px;
+   border-radius: 20px;
    }
 
   .target-score { 
@@ -100,49 +100,49 @@ border-radius: 12px;
 
 .gem1  {
   grid-area: gem1;
-  margin: 0 auto;
+  margin: 0;
    
 }
 /* Need to have classes for all gems in the css page because they are tied to the grid area (can't consolidate into one class)*/
 .gem2 { 
   grid-area: gem2;
-  margin: 0 auto;
+  margin: 0 ;
   
  }
 
 .gem3 { 
   grid-area: gem3;
-  margin: 0 auto;
+  margin: 0 ;
  }
 
 .gem4 { 
   grid-area: gem4;
-  margin: 0 auto;
+  margin: 0 ;
  }
 
 .gem5 { 
   grid-area: gem5;
-  margin: 0 auto;
+  margin: 0 ;
  }
 
 .gem6 { 
   grid-area: gem6;
-  margin: 0 auto;
+  margin: 0 ;
  }
 
 .gem7 { 
   grid-area: gem7;
-  margin: 0 auto;
+  margin: 0 ;
  }
 
 .gem8 { 
   grid-area: gem8;
-  margin: 0 auto;
+  margin: 0 ;
  }
 
 .gem9 { 
   grid-area: gem9;
-  margin: 0 auto;
+  margin: 0 ;
  }
 
 .user-score { 
